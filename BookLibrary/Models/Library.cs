@@ -11,7 +11,6 @@ namespace BookLibrary.Models
         public List<Student> Students { get; set; }
         public List<Librarian> Librarians { get; set; }
         public List<Book> Books { get; set; }
-        public List<Rent> Rents { get; set; }
         public decimal TotalBudget { get; set; }
     }
 }
