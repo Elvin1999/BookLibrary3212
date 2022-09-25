@@ -38,11 +38,12 @@ namespace BookLibrary.ViewModels
                   if(Username=="admin" && Password == "admin")
                   {
                       var viewModel = new LibraryHomeUCViewModel();
+                      
                       var view = new LibrantHomeUC();
                       view.DataContext = viewModel;
 
-                      MyGrid.Children.RemoveAt(0);
-                      MyGrid.Children.Add(view);
+                      App.MyGrid.Children.RemoveAt(0);
+                      App.MyGrid.Children.Add(view);
                   }
               });
         }

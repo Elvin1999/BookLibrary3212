@@ -13,21 +13,21 @@ namespace BookLibrary.ViewModels
     {
         public RelayCommand SelectLibrarianCommand { get; set; }
         public RelayCommand SelectStudentCommand { get; set; }
-        public Grid MyGrid { get; internal set; }
 
         public HomeUCViewModel()
         {
             SelectLibrarianCommand = new RelayCommand((e) =>
               {
-                  MyGrid.Children.RemoveAt(0);
+                  App.MyGrid.Children.RemoveAt(0);
 
                   var uc = new LibrarianUC();
                   var viewModel = new LibrarianUCViewModel();
-                  viewModel.MyGrid = MyGrid;
+                  viewModel.Username = "admin";
+                  viewModel.Password = "admin"; 
 
                   uc.DataContext = viewModel;
 
-                  MyGrid.Children.Add(uc);
+                  App.MyGrid.Children.Add(uc);
               });
         }
     }

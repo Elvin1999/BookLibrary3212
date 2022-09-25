@@ -13,5 +13,6 @@ namespace BookLibrary.Models
         public double Price { get; set; }
         public double Discount { get; set; }
         public int Page { get; set; }
+        public int BookCount { get; set; }
     }
 }

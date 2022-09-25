@@ -26,15 +26,15 @@ namespace BookLibrary
         {
             InitializeComponent();
             var viewModel = new MainViewModel();
-            viewModel.MyGrid = mygrid;
+            App.MyGrid = mygrid;
 
             var homeUCViewModel = new HomeUCViewModel();
             var homeUC = new HomeUC();
-            homeUCViewModel.MyGrid = viewModel.MyGrid;
+            
 
 
             homeUC.DataContext = homeUCViewModel;
-            viewModel.MyGrid.Children.Add(homeUC);
+            App.MyGrid.Children.Add(homeUC);
 
 
             this.DataContext = viewModel;
