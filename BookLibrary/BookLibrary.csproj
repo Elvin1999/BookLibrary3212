@@ -75,6 +75,7 @@
     <Compile Include="ViewModels\LibraryHomeUCViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RegisterStudentUCViewModel.cs" />
+    <Compile Include="ViewModels\RentUCViewModel.cs" />
     <Compile Include="Views\UserControls\AddBookUC.xaml.cs">
       <DependentUpon>AddBookUC.xaml</DependentUpon>
     </Compile>
@@ -92,6 +93,9 @@
     </Compile>
     <Compile Include="Views\UserControls\RegisterStudentUC.xaml.cs">
       <DependentUpon>RegisterStudentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\RentUC.xaml.cs">
+      <DependentUpon>RentUC.xaml</DependentUpon>
     </Compile>
     <Page Include="Dictionary1.xaml">
       <SubType>Designer</SubType>
@@ -130,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\RegisterStudentUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\RentUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

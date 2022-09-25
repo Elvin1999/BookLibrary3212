@@ -14,10 +14,24 @@ namespace BookLibrary.ViewModels
         public RelayCommand AddNewBookCommand { get; set; }
         public RelayCommand ShowAllBooksCommand { get; set; }
         public RelayCommand RegisterStudentCommand { get; set; }
+        public RelayCommand SelectRentCommand { get; set; }
         public Grid MyGrid { get; internal set; }
 
         public LibraryHomeUCViewModel()
         {
+
+            SelectRentCommand = new RelayCommand((e) =>
+              {
+                  App.MyGrid.Children.RemoveAt(0);
+
+                  var viewModel = new RentUCViewModel();
+                  var view = new RentUC();
+                  view.DataContext = viewModel;
+
+                  App.MyGrid.Children.Add(view);
+              });
+
+
             AddNewBookCommand = new RelayCommand((e) =>
             {
                 App.MyGrid.Children.RemoveAt(0);

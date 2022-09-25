@@ -43,7 +43,7 @@ namespace BookLibrary.Helpers
         {
             List<Student> students = null;
             var serializer = new JsonSerializer();
-            using (var sr = new StreamReader("books.json"))
+            using (var sr = new StreamReader("students.json"))
             {
                 using (var jr = new JsonTextReader(sr))
                 {
