@@ -14,5 +14,9 @@ namespace BookLibrary.Models
         public string Password { get; set; }
 
         public List<Rent> Rents { get; set; }
+        public Student()
+        {
+            Rents = new List<Rent>();
+        }
     }
 }

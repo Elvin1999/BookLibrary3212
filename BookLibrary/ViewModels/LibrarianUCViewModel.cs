@@ -27,7 +27,6 @@ namespace BookLibrary.ViewModels
             set { password = value; OnPropertyChanged(); }
         }
 
-
         public RelayCommand SignInCommand { get; set; }
         public RelayCommand BackCommand { get; set; }
         public Grid MyGrid { get; internal set; }
