@@ -13,6 +13,7 @@ namespace BookLibrary.ViewModels
     {
         public RelayCommand AddNewBookCommand { get; set; }
         public RelayCommand ShowAllBooksCommand { get; set; }
+        public RelayCommand RegisterStudentCommand { get; set; }
         public Grid MyGrid { get; internal set; }
 
         public LibraryHomeUCViewModel()
@@ -38,6 +39,18 @@ namespace BookLibrary.ViewModels
                   App.MyGrid.Children.RemoveAt(0);
                   App.MyGrid.Children.Add(view);
               });
+
+
+            RegisterStudentCommand = new RelayCommand((e) =>
+            {
+                var viewModel = new RegisterStudentUCViewModel();
+                var view = new RegisterStudentUC();
+                view.DataContext=viewModel;
+
+                App.MyGrid.Children.RemoveAt(0);
+                App.MyGrid.Children.Add(view);
+
+            });
         }
     }
 }

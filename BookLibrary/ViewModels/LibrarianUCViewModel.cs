@@ -29,10 +29,18 @@ namespace BookLibrary.ViewModels
 
 
         public RelayCommand SignInCommand { get; set; }
+        public RelayCommand BackCommand { get; set; }
         public Grid MyGrid { get; internal set; }
 
         public LibrarianUCViewModel()
         {
+
+            BackCommand = new RelayCommand((e) => {
+                App.MyGrid.Children.RemoveAt(0);
+                App.MyGrid.Children.Add(App.BackPage);
+            
+            });
+
             SignInCommand = new RelayCommand((e) =>
               {
                   if(Username=="admin" && Password == "admin")

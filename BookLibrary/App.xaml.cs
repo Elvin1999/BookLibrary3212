@@ -17,10 +17,13 @@ namespace BookLibrary
     {
         public static int Global_ID = 0;
         public static BookRepository BookRepo;
+        public static StudentRepository StudentRepo;
         public static Grid MyGrid;
+        public static UIElement BackPage;
         public App()
         {
             BookRepo = new BookRepository();
+            StudentRepo=new StudentRepository();
         }
     }
 }

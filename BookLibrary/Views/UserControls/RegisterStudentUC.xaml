@@ -7,6 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        
+        <StackPanel Margin="0,70,0,0" Width="450" >
+            <Label FontSize="26" Foreground="{StaticResource mainColor}">Fullname</Label>
+            <TextBox Text="{Binding Student.Fullname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="26" Foreground="{StaticResource mainColor}" ></TextBox>
+
+            <Label FontSize="26" Foreground="{StaticResource mainColor}">Username</Label>
+            <TextBox  Text="{Binding Student.Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="26" Foreground="{StaticResource mainColor}" ></TextBox>
+
+            <Label FontSize="26" Foreground="{StaticResource mainColor}">Password</Label>
+            <TextBox Text="{Binding Student.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="26" Foreground="{StaticResource mainColor}" ></TextBox>
+
+            <Button Command="{Binding AddStudentCommand}" Margin="0,30,0,0" BorderThickness="3" BorderBrush="{StaticResource mainColor}" Foreground="{StaticResource mainColor}" FontSize="26" Background="{StaticResource secondColor}">Add New Student</Button>
+        </StackPanel>
     </Grid>
 </UserControl>

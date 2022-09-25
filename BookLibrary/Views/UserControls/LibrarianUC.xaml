@@ -7,7 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid  Background="{StaticResource mainColor}" >
-        <StackPanel Background="{StaticResource secondColor}"  Width="400"  Margin="0,40,0,0">
+        <Canvas>
+            <Image  Canvas.Left="50" Canvas.Top="35" Width="40" Height="40" Source="\images\leftarrow.png" >
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding BackCommand}" />
+                </Image.InputBindings>
+            </Image>   
+        <StackPanel Canvas.Left="200" Background="{StaticResource secondColor}"  Width="400"  Margin="0,40,0,0">
             <Label  Foreground="{StaticResource mainColor}" FontSize="70"
                    FontWeight="ExtraBlack" FontFamily="Comic Sans MS"
                    Content="Login" ></Label>
@@ -25,5 +31,6 @@
                 Text="{Binding Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5,0,5,0" Background="Transparent" FontSize="35" ></TextBox>
             <Button  Command="{Binding SignInCommand}" Foreground="{StaticResource mainColor}" Width="200" Margin="20" FontSize="30" Style="{StaticResource MyButtonStyle}"  >Sign In</Button>
         </StackPanel>
+        </Canvas>
     </Grid>
 </UserControl>

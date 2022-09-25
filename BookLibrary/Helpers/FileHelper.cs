@@ -25,6 +25,34 @@ namespace BookLibrary.Helpers
             }
         }
 
+        public static void WriteStudents(List<Student> students)
+        {
+            var serializer = new JsonSerializer();
+
+            using (var sw = new StreamWriter("students.json"))
+            {
+                using (var jw = new JsonTextWriter(sw))
+                {
+                    jw.Formatting = Formatting.Indented;
+                    serializer.Serialize(jw, students);
+                }
+            }
+        }
+
+        public static List<Student> ReadStudents()
+        {
+            List<Student> students = null;
+            var serializer = new JsonSerializer();
+            using (var sr = new StreamReader("books.json"))
+            {
+                using (var jr = new JsonTextReader(sr))
+                {
+                    students = serializer.Deserialize<List<Student>>(jr);
+                }
+            }
+            return students;
+        }
+
         public static List<Book> ReadBooks()
         {
             List<Book> books = null;

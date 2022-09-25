@@ -13,11 +13,11 @@ namespace BookLibrary.ViewModels
     {
         public RelayCommand SelectLibrarianCommand { get; set; }
         public RelayCommand SelectStudentCommand { get; set; }
-
         public HomeUCViewModel()
         {
             SelectLibrarianCommand = new RelayCommand((e) =>
               {
+                  App.BackPage = App.MyGrid.Children[0];
                   App.MyGrid.Children.RemoveAt(0);
 
                   var uc = new LibrarianUC();

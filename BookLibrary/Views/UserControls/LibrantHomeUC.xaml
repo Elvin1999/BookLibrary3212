@@ -24,7 +24,7 @@
             <Button Command="{Binding ShowAllBooksCommand}" FontSize="30" FontWeight="ExtraBlack" Foreground="{StaticResource mainColor}" Style="{StaticResource MyButtonStyle}"  >Show All Books</Button>
             <Button Command="{Binding AddNewBookCommand}" FontSize="30" FontWeight="ExtraBlack" Foreground="{StaticResource mainColor}" Style="{StaticResource MyButtonStyle}"  >Add New Book</Button>
             <Button FontSize="30" FontWeight="ExtraBlack" Foreground="{StaticResource mainColor}" Style="{StaticResource MyButtonStyle}"  >Show All Rents</Button>
-            <Button FontSize="30" FontWeight="ExtraBlack" Foreground="{StaticResource mainColor}" Style="{StaticResource MyButtonStyle}"  >Register Student</Button>
+            <Button Command="{Binding RegisterStudentCommand}" FontSize="30" FontWeight="ExtraBlack" Foreground="{StaticResource mainColor}" Style="{StaticResource MyButtonStyle}"  >Register Student</Button>
             <Button FontSize="30" FontWeight="ExtraBlack" Foreground="{StaticResource mainColor}" Style="{StaticResource MyButtonStyle}"  >Rent Book</Button>
         </StackPanel>
     </Grid>
